@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="pessoassfamo.avif" style="width: 30%;" id="famousImage">
+
+    <h4 id="famousText"></h4>
+
+    <button onclick="update()">Próximo</button><br><br>
+
+
+    <script>
+        var images =
+           [ "Zendayaa.jpg", "billie.jpg","olivia-rodrigo.jpg", "sofiacarson.webp", "dualipa.webp", "tatay.webp"
+        ];
+
+        var names=["Zendaya","Billie Eilish", "Olivia Rodrigo","Sofia Carson", "Dua lipa", "Taylor Swift"];
+
+        var i = 0;
+        function update(){
+            i++;
+            var numbersOfFamousinArray =6
+            if(i> numbersOfFamousinArray)
+            {
+                i = 0;
+            }
+            var updatedImage = images[i];
+            var updatedName = names [i];
+            document.getElementById("famousImage").src = updatedImage;
+            document.getElementById("famousText").innerHTML = updatedName;
+        }
+
+    </script>
+</body>
+</html>
